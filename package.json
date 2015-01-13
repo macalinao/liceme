@@ -1,0 +1,32 @@
+{
+  "name": "liceme",
+  "description": "Update all of your licenses in one go!",
+  "version": "0.1.0",
+  "dependencies": {
+    "bootstrap": "^3.3.1",
+    "browserify": "^8.1.0",
+    "express": "^4.10.7",
+    "fluxxor": "^1.5.1",
+    "gulp": "^3.8.10",
+    "gulp-livereload": "^3.2.0",
+    "react": "^0.12.2",
+    "reactify": "^0.17.1",
+    "rimraf": "^2.2.8",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "author": "Ian Macalinao <me@ian.pw>",
+  "repository": "simplyianm/liceme",
+  "license": "MIT",
+  "keywords": [
+    "liceme",
+    "license"
+  ],
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec",
+    "start": "node server"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
+  }
+}

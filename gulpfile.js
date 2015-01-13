@@ -14,18 +14,19 @@ gulp.task('browserify', ['clean'], function() {
   var b = browserify();
   b.transform(reactify);
   b.add('./public/application.jsx');
-  b.bundle()
+  return b.bundle()
     .pipe(source('application.js'))
     .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('copy', ['clean'], function() {
-  gulp.src('./public/index.html')
+  return gulp.src(['./public/index.html', './public/style.css'])
     .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('default', ['browserify', 'copy'], function() {
-  livereload();
+  return gulp.src('*').pipe(
+    livereload());
 });
 
 gulp.task('watch', ['default'], function() {

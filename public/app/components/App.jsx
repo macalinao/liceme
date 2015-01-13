@@ -1,8 +1,12 @@
 var React = require('react');
 
+var Landing = require('./Landing.jsx');
+
 var App = React.createClass({
   render: function() {
-    return <p>Hello, world!</p>;
+    return (
+      <div><Landing /></div>
+    );
   }
 });
 
